@@ -1,6 +1,6 @@
 # Oakfall
 
-**The writing studio for Obsidian.** Binder, snapshots with live compare, inspector, corkboard, timeline, research, compile. One plugin, one settings page, every module switchable, and everything stored as Markdown, frontmatter, and git commits you can read with nothing installed.
+**The Obsidian connector for Oakfall.** The binder and the other writing functions, in Obsidian's own look, on a vault the [Oakfall app](https://oakfall.app/) also opens. One plugin, one settings page, every module switchable, and everything stored as Markdown, frontmatter, and git commits you can read with nothing installed. It does not restyle Obsidian.
 
 > Status: pre-release. The [importer](https://github.com/oakfall/scrivener-to-obsidian) is feature complete for v0.1. The plugin core and the first module, Map, build and pass their tests; nothing is published yet. Watch the repo or open a discussion if you write long-form in Obsidian and want in early.
 
@@ -94,7 +94,7 @@ Four rules hold the whole thing together:
 
 ## What is open, and what is not
 
-Anything that touches your files is open source under Apache-2.0 and always will be: the spec, the importer, the plugin core with its module and theme APIs, and every module that reads or writes the vault. Snapshots, binder, inspector, corkboard and threads, research, cast, flat maps, and targets are all in that set. Themes and project templates are open formats you can build, share, and sell; see [Themes and templates](docs/theming.md).
+Anything that touches your files is open source under Apache-2.0 and always will be: the spec, the importer, the plugin core and its module API, and every module that reads or writes the vault. The binder is the function we want everyone to have; the other modules in this repo are the same kind of thing, functions, not a restyle. Project templates are an open format you can build and share; see [How the plugin looks, and project templates](docs/theming.md). Looks, the desk, and Gall's outfits live in the Oakfall app and are not part of this plugin.
 
 Three things are paid, and none of them can hold your files:
 
@@ -121,7 +121,7 @@ Gall is the assistant: it lives in the margin, knows the manuscript through the 
 - [Architecture](docs/architecture.md): core, modules, compatibility promises, threat model.
 - [Vault spec](docs/spec.md): the frontmatter fields, layout, snapshot files, and commit format everything agrees on.
 - [Sync and history](docs/sync-and-history.md): how it behaves under iCloud, Dropbox, Obsidian Sync, Syncthing, and git.
-- [Themes and templates](docs/theming.md): the open formats for building your own look and your own project starters.
+- [How the plugin looks, and project templates](docs/theming.md): the plugin follows Obsidian; templates are starter projects.
 - Site: https://oakfall.app/ (source in [oakfall-site](https://github.com/oakfall/oakfall-site), with the brand kit)
 
 ## License and affiliation

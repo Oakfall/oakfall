@@ -223,9 +223,10 @@ phases:
         acceptance:
           - { id: N0.1-a1, met: false, check: "in the test vault, turn Gall on, ask where Mara was last seen and where Stillwater is on the map; both answers cite the right notes and open them", method: manual }
   - id: L8
-    title: Themes and templates
-    program: themes-and-templates
+    title: Project templates
+    program: templates
     status: planned
+    note: "2026-10-17: public theme format withdrawn; looks live in the Oakfall app. This phase is templates only."
     depends_on: [L4]
     subphases: []
   - id: L9

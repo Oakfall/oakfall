@@ -13,7 +13,7 @@ Two rules hold across every program. Anything that reads or writes the vault is 
 | **Research and Cast** | Attachments, PDF highlights that link back, character and setting notes with computed appearances | All of it | Nothing | L6 | Cast, Research | Appearances engine done and used by the map; panels next |
 | **Gall** | The assistant in the margin: answers from the files and history, proposes edits the writer accepts, never writes prose | The panel and the retrieval answers that need no model | Hosted models and manuscript intelligence, by subscription; bring-your-own-key at a lower annual price | N0 onward, own ledger later | Gall | Panel with retrieval answers in progress |
 | **Compile** | Manuscript to docx, pdf, epub, and Markdown with presets writers already pay for elsewhere | A plain Markdown compile | Submission presets, one-time | later | Compile | Not started |
-| **Themes and templates** | Open formats for how Oakfall looks and what a project starts with | The formats, the default theme, six starter templates | An optional store with revenue share, never required | L8 | none | Formats documented |
+| **Templates** | What a new project starts with | The template folder format and six starter templates | Nothing required; an optional listing later | L8 | none | Format documented. A public theme format was withdrawn 2026-10-17: looks live in the Oakfall app; this plugin follows Obsidian. |
 
 ## How a program grows
 

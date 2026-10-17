@@ -1,56 +1,8 @@
-# Themes and templates
+# How the plugin looks, and project templates
 
-Oakfall is meant to be built on. Two things are open formats from day one: themes, which change how every Oakfall panel looks, and project templates, which change what a new project starts with. Both are folders of plain files, both are shareable, and both may be sold by whoever makes them.
+The Oakfall plugin sits inside Obsidian and uses Obsidian's theme. It does not ship a look, a theme picker, or a theme format for others to build and sell. Looks (Moss, Autumn Harvest, Cupid's Roses, and the rest), Desk and Classic, Focus, and Gall's outfits live in the [Oakfall app](https://oakfall.app/). The plugin's job is the functions: the binder first, then the other modules, in the host's own chrome.
 
-## How Oakfall is styled
-
-Every Oakfall panel, the compare view, the binder, the inspector, the corkboard, the cast panel, the maps, and Gall's margin, is drawn from one set of CSS custom properties with the `--oak-` prefix. Nothing is hard-coded. The core ships the default set, which is the paper-and-ink palette on this site, and a theme overrides some or all of it.
-
-Oakfall themes sit on top of Obsidian themes, not instead of them. An Obsidian theme still styles the editor, the file explorer, and the app chrome. A Oakfall theme styles Oakfall's panels and can read Obsidian's own variables so the two agree.
-
-## A theme is a folder
-
-```
-my-theme/
-  theme.json        name, author, version, and the token values
-  theme.css         optional: rules that go beyond tokens
-  preview.png       optional: shown in the theme picker
-```
-
-`theme.json`:
-
-```json
-{
-  "name": "Typewriter",
-  "author": "someone",
-  "version": "1.0.0",
-  "oakfall": 1,
-  "tokens": {
-    "paper": "#F6F3EA",
-    "ink": "#2A2622",
-    "graphite": "#7A746B",
-    "rule": "#D9D3C6",
-    "removed": "#9C3B2E",
-    "removed-wash": "#F1DED8",
-    "added": "#3F6B4A",
-    "added-wash": "#DFE9DE",
-    "label-red": "#B4574E",
-    "label-blue": "#4E6A95",
-    "label-green": "#5F8A5B",
-    "label-yellow": "#C6A14A",
-    "font-body": "\"iA Writer Quattro\", Georgia, serif",
-    "font-mono": "ui-monospace, Menlo, monospace",
-    "card-radius": "2px",
-    "card-shadow": "none"
-  }
-}
-```
-
-Every key in `tokens` becomes `--oak-<key>` on the Oakfall root element. Unknown keys are set anyway, so a theme can define tokens for a module that does not exist yet. Missing keys fall back to the default theme. `oakfall: 1` is the theme format version; readers accept older versions.
-
-`theme.css` is loaded after the tokens and scoped to Oakfall's panels by the core, so a theme cannot restyle the rest of Obsidian by accident. Selectors are stable and documented per module; a class name that starts with `lh-` is public API and will not change without a format version bump.
-
-Themes install by dropping the folder into `.oakfall/themes/` in the vault, or through the theme picker in settings, which reads a community list. There is no build step.
+`--oak-` tokens still exist in `styles.css` so a panel can follow Obsidian's variables (`--background-primary`, `--text-normal`, and so on). They are an implementation detail of this repo, not a public theme API. Do not publish a "Oakfall theme" folder against them; it will not be loaded.
 
 ## A project template is a folder
 
@@ -68,12 +20,8 @@ A template is a starting project: the folders, the `_Project.md` with labels and
 
 Templates install to `.oakfall/templates/`. Creating a project from one copies the folder, assigns fresh `id` values, and stamps the date. Nothing in a template is special after that; it is an ordinary project.
 
-## Sharing and selling
+Templates are yours. Publish them on GitHub, sell them on your own site, or list them in a community gallery when it exists. They change starting content, never how Obsidian looks, and never what the spec stores after the copy.
 
-Themes and templates are yours. Publish them on GitHub, sell them on your own site, or list them in the community gallery when it exists. Oakfall will not take a cut of anything sold outside its own store, and it will never require a theme or template to be approved before it works. If a store with revenue sharing ships later, it will be optional.
+## What this page used to be
 
-## What themes cannot do
-
-- Run code. `theme.css` is CSS; there is no script hook, so a theme cannot read your vault or call the network.
-- Reach outside Oakfall's panels.
-- Change what is stored. Themes are presentation only; the spec is untouched.
+Until 2026-10-17 this page specified a folder format (`theme.json`, `theme.css`) for restyling Oakfall's panels on top of Obsidian. That format is withdrawn. The desk is the app.

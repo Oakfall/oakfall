@@ -2,14 +2,14 @@
 
 > Hand-written public roadmap. The engineering ledger, `docs/PHASES.md`, is the source of truth for delivery state; this page is the narrative. Edit by hand.
 
-Oakfall is a writing studio for Obsidian: binder, snapshots with side-by-side compare, inspector, corkboard and threads, research, cast, maps, compile, and Gall, the assistant. Everything is stored as Markdown, frontmatter, files, and git commits under an open [vault spec](docs/spec.md). The importer that brings Scrivener projects across, history included, lives in [scrivener-to-obsidian](https://github.com/oakfall/scrivener-to-obsidian) and has its own roadmap.
+This repo is the Obsidian connector for Oakfall: the binder and the other writing functions, in Obsidian's own look, on a vault the [Oakfall app](https://oakfall.app/) also opens. Everything is stored as Markdown, frontmatter, files, and git commits under an open [vault spec](docs/spec.md). The importer that brings Scrivener projects across, history included, lives in [scrivener-to-obsidian](https://github.com/oakfall/scrivener-to-obsidian) and has its own roadmap. Looks and the desk live in the app; this plugin does not restyle Obsidian.
 
 This is a three-horizon roadmap. Where a thing is designed but not built, this page says so.
 
 ## Shipped
 
 - **The vault spec, version 1.** Layout, frontmatter, snapshot files, snapshot commits, character and setting notes, map notes with pins and an optional relief source. Open, versioned, unknown fields preserved.
-- **The design.** User stories, architecture with a core and switchable modules, the sync and history model (files store by default, git optional, never inside a cloud-synced folder), the theme and template formats, the open-versus-paid split.
+- **The design.** User stories, architecture with a core and switchable modules, the sync and history model (files store by default, git optional, never inside a cloud-synced folder), project templates, the open-versus-paid split. A public theme format was withdrawn 2026-10-17.
 - **The importer's RTF reader.** Scrivener's Cocoa RTF to Markdown without pandoc, keeping hyperlink fields that pandoc drops, which is where Scrivener stores comments and internal links. In the importer repo.
 - **The brand and the site.** Name, mark, Gall, and a landing page that shows each module as it will look, including a live relief map.
 
@@ -28,7 +28,7 @@ v0.1 ships when a Scrivener refugee can import a project, open it in Obsidian, s
 - **v0.3 Corkboard.** Grid, kanban columns by status, and label threads in manuscript order, with the story-date axis.
 - **v0.4 Research and Cast.** Attachments pane, PDF highlights linking back, character and setting notes with computed appearances.
 - **v0.5 Map.** Any image as a map, pins to notes, place cards with computed scenes and pinned images.
-- **v0.6 Themes and templates.** The `--oak-` token system exposed, the theme folder format, the template folder format, six starter templates.
+- **v0.6 Project templates.** The template folder format and six starter templates. Looks stay in the Oakfall app; the plugin follows Obsidian.
 - **v1.0.** Spec frozen at version 1 with a compatibility promise, the plugin in the Obsidian community list, the importer at 1.0.
 - **Paid, outside this repository, after v1.0:** Gall, the assistant, as the only subscription; compile presets; relief maps. Each is a module against the same core API and stores nothing the open modules cannot read.
 

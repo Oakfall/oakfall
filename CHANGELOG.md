@@ -8,6 +8,7 @@ Not yet cut. Scope: plugin core and the Snapshots module; see `ROADMAP.md`.
 
 ### Changed
 
+- The plugin is the Obsidian connector: functions (the binder first) in Obsidian's own look. A public theme format (`theme.json` / `theme.css`, a theme picker, selling Oakfall themes) is withdrawn; looks live in the Oakfall app. `--oak-` tokens remain as an implementation detail. Project templates stay. See `docs/theming.md`.
 - Renamed to Oakfall (via Nibwrite, 2026-10-13, and Longhand before that): plugin id `oakfall`, spec field `oakfall: 1` (the older `nibwrite: 1` and `longhand: 1` are still read), theme tokens `--oak-`, module CSS classes `oakfall-*`, repository `oakfall/oakfall`.
 - The assistant is Gall, not Nib: module id `gall`, command `gall-ask`, view type `oakfall-gall`, classes `lh-gall-*`, module directory `src/modules/gall`. The drawing is unchanged.
 
