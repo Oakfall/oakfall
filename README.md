@@ -112,7 +112,8 @@ Gall is the assistant: it lives in the margin, knows the manuscript through the 
 
 ## Repositories
 
-- **[oakfall](https://github.com/oakfall/oakfall)**, this repo: the spec, the design, and the plugin.
+- **[oakfall](https://github.com/oakfall/oakfall)**, this repo: the spec, the design, and the Obsidian plugin. Not the desktop app.
+- **The Oakfall app** is a separate, private product (Tauri). It opens the same vault and runs these modules through the host interface. Looks and the desk live there; this plugin does not restyle Obsidian.
 - **[scrivener-to-obsidian](https://github.com/oakfall/scrivener-to-obsidian)**: the importer that turns a `.scriv` package into a spec-compliant vault and replays every Scrivener snapshot as git history.
 
 ## Read more

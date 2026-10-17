@@ -7,7 +7,7 @@
 3. **Modular by design.** The plugin is a small core plus feature modules that depend only on the core API and the spec. Modules can ship, be disabled, or be licensed independently.
 4. **Secure by design.** No third-party runtime dependencies in the importer. No network access anywhere. Git is invoked as an argv array, never through a shell string. Paths derived from user content are sanitised and confined to the output directory. Nothing executes content from the vault.
 5. **Boring technology.** Go standard library for the importer. TypeScript with the Obsidian API for the plugin. Git as the version store. Pandoc is optional, only for compile targets that need it.
-6. **Host-agnostic modules.** Obsidian is the first host, not the only one. Modules never import the Obsidian API directly; they talk to a small host interface (read and write files, watch the vault, open a document at a line, register a view and a command, show a settings section) that the Obsidian adapter implements today. A standalone Oakfall application implements the same interface later and runs the same modules unchanged. The spec makes the files portable; this rule makes the code portable.
+6. **Host-agnostic modules.** Modules never import the Obsidian API directly; they talk to a small host interface (read and write files, watch the vault, open a document at a line, register a view and a command, show a settings section). The Obsidian adapter implements it in this repo. The Oakfall desktop app (separate repo) implements it too and runs the same modules. The spec makes the files portable; this rule makes the code portable. Looks stay in the app. This plugin follows the host's look.
 
 ## Components
 

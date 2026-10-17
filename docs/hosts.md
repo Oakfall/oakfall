@@ -52,9 +52,9 @@ The Obsidian plugin is the adapter plus an entry point: `src/host/obsidian/host.
 
 ## A second host
 
-A second host is the same studio mounted through a different adapter. The candidate is a Oakfall desktop application: one window, one book open at a time, the binder on the left, a Markdown editor in the middle, the map, timeline, and Gall as panels, and a folder on disk as the project. Its adapter would implement the list above on top of a desktop shell such as Tauri and an editor such as CodeMirror, the same components Obsidian is built from.
+A second host is the same studio mounted through a different adapter. That host is the Oakfall desktop app (separate repo, Tauri 2, CodeMirror 6): one window, the binder on the left, a Markdown editor in the middle, the map, timeline, and Gall as panels, a folder on disk as the project. Its adapter implements the list above. Looks, Desk and Classic, and the tour live in that app. This plugin does not restyle Obsidian.
 
-What the writer would get: Oakfall with no Obsidian around it. No vault of many projects, no community-plugin switch, no Properties panel showing pins as JSON, the brand on the window. What they would lose until it is built: mobile, sync, and the plugin directory as a way to find Oakfall.
+What the writer gets in the app: Oakfall with no Obsidian around it. No community-plugin switch, no Properties panel showing pins as JSON, the brand on the window. Mobile and a Cursor connector are later hosts, not this one.
 
 Both hosts read and write the same files under the same spec, so a writer can use the app at the desk and Obsidian on the phone on the same folder, and nothing needs converting.
 
@@ -66,4 +66,4 @@ Anything a writer would call a feature goes in a module against the host interfa
 
 - Obsidian host: complete for every module built so far.
 - Memory host: complete; runs the test suite.
-- Desktop host: not started. A bounded spike is the way to find out how much of the current friction is Obsidian's, before deciding anything larger.
+- Desktop host: the Oakfall app (separate, private repo) implements the host interface and mounts these modules. Work on the window lives there; work on a function lives here.
